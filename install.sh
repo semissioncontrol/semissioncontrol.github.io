@@ -20,4 +20,4 @@ cd /semc/src
 git clone https://github.com/semissioncontrol/core
 
 # Initialize core installer
-bash /semc/src/core/actions/installer/installer.sh
+bash /semc/src/core/actions/install/installer.sh
