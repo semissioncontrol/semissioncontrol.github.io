@@ -5,6 +5,8 @@ then
     exit 1
 fi
 
+echo "\n"
+
 # Reset sanity variables
 export NOGITSEMC = false
 export NOINTERNETSEMC = false
