@@ -5,8 +5,15 @@ then
     exit 1
 fi
 
+# Reset sanity variables
+export NOGITSEMC = false
+export NOINTERNETSEMC = false
+export NOROOTPERMSSEMC = true
+
+
 # Add sanity checks here
 echo "Performing sanity checks"
+
 echo "[1/3] Git"
 git --version || export NOGITSEMC=true
 
