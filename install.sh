@@ -52,7 +52,4 @@ mkdir /semc/src
 cd /semc/src
 git clone https://github.com/semissioncontrol/core
 
-# Clone cli
-git clone https://github.com/semissioncontrol/core
-
-# Initialize core
+# Initialize core installer
