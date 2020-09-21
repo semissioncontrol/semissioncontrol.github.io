@@ -25,6 +25,7 @@ wget -q --spider github.com || export NOINTERNETSEMC=1
 echo "[3/3] Root permissions"
 sudo -v || export NOROOTPERMSSEMC=1
 
+# Check your sanity here
 if [ $NOGITSEMC ]
 then
   echo "Error! Git not found!"
