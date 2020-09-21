@@ -6,7 +6,7 @@ then
 fi
 
 echo
-
+<<WIP
 # Reset sanity variables
 export NOGITSEMC=0
 export NOINTERNETSEMC=0
@@ -43,6 +43,7 @@ then
 fi
 
 echo "Sanity checks complete. Beginning installation."
+WIP
 sleep 2
 
 # Create /semc
