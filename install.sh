@@ -5,12 +5,12 @@ then
     exit 1
 fi
 
-echo "\n"
+echo
 
 # Reset sanity variables
-export NOGITSEMC = false
-export NOINTERNETSEMC = false
-export NOROOTPERMSSEMC = true
+export NOGITSEMC=false
+export NOINTERNETSEMC=false
+export NOROOTPERMSSEMC=true
 
 
 # Add sanity checks here
