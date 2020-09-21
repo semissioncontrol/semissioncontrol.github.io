@@ -8,22 +8,22 @@ fi
 echo
 
 # Reset sanity variables
-export NOGITSEMC=false
-export NOINTERNETSEMC=false
-export NOROOTPERMSSEMC=true
+export NOGITSEMC=0
+export NOINTERNETSEMC=0
+export NOROOTPERMSSEMC=0
 
 
 # Add sanity checks here
 echo "Performing sanity checks"
 
 echo "[1/3] Git"
-git --version || export NOGITSEMC=true
+git --version || export NOGITSEMC=1
 
 echo "[2/3] Internet Connection"
-wget -q --spider github.com || export NOINTERNETSEMC=true
+wget -q --spider github.com || export NOINTERNETSEMC=1
 
 echo "[3/3] Root permissions"
-sudo -v || export NOROOTPERMSSEMC=true
+sudo -v || export NOROOTPERMSSEMC=1
 
 if [ $NOGITSEMC ]
 then
