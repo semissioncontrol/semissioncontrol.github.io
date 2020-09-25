@@ -13,6 +13,9 @@ function installDirectory {
     git clone https://github.com/semissioncontrol/core
 }
 
+# Version
+echo "SEMC installer v0.1.0"
+
 # Confirmation from user
 read -p "Install SEMC on this device? " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]
