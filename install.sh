@@ -3,6 +3,9 @@ function installDirectory {
     # Create /semc
     mkdir /semc
 
+    mkdir /semc/bin
+    echo "export PATH=$PATH:/semc/bin" >> ~/.bashrc
+
     # Clone core
     mkdir /semc/src
     cd /semc/src
