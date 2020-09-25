@@ -11,11 +11,17 @@ echo
 wget -q --spider http://github.com
 
 if [ $? -eq 0 ]; then
-    echo "Internet Connection found"
+    echo "Good: Internet Connection found."
 else
-    echo "Internet Connection not found!"
+    echo "Error: Internet Connection not found!"
     exit
 fi
+
+if [ "$EUID" -ne 0 ]
+  then echo "Error: Please run as root."
+  exit
+fi
+echo "Good: Root access found"
 
 # Check if semcOS is being used
 if ! command -v semc-install &> /dev/null
