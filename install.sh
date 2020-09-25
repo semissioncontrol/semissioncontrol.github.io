@@ -14,7 +14,7 @@ function installDirectory {
 }
 
 # Version
-echo "SEMC installer v0.1.1\n"
+echo "SEMC installer v0.1.1"
 
 # Confirmation from user
 read -p "Install SEMC on this device? " -n 1 -r
