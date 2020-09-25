@@ -20,7 +20,7 @@ echo "SEMC installer v0.1.1"
 read -p "Install SEMC on this device? " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
-    echo "Aborting...\n"
+    echo "Aborting..."
     exit 1
 fi
 
