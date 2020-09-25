@@ -67,9 +67,9 @@ then
         exit 1
     fi
     
-    for i in {1..5}
+    for i in {5..1}
     do
-        echo "Installing in $i...\r"
+        echo "Installing in $i..."
         sleep 1
     done
     
@@ -113,9 +113,9 @@ then
     xbps-install make
 fi
 
-for i in {1..5}
+for i in {5..1}
 do
-    echo "Installing in $i...\r"
+    echo "Installing in $i..."
     sleep 1
 done
 
