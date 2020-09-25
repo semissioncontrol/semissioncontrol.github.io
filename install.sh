@@ -1,3 +1,14 @@
+# Functions
+function installDirectory {
+    # Create /semc
+    mkdir /semc
+
+    # Clone core
+    mkdir /semc/src
+    cd /semc/src
+    git clone https://github.com/semissioncontrol/core
+}
+
 # Confirmation from user
 read -p "Install SEMC on this device? " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]
@@ -45,13 +56,3 @@ fi
 xbps-install -Suv
 installDirectory
 bash /semc/src/core/actions/install/installer.sh
-
-function installDirectory {
-    # Create /semc
-    mkdir /semc
-
-    # Clone core
-    mkdir /semc/src
-    cd /semc/src
-    git clone https://github.com/semissioncontrol/core
-}
