@@ -7,17 +7,45 @@ fi
 
 echo
 
-# Sanity checks should go here
+# Sanity checks
+wget -q --spider http://github.com
 
-sleep 2
+if [ $? -eq 0 ]; then
+    echo "Internet Connection found"
+else
+    echo "Internet Connection not found!"
+    exit
+fi
 
-# Create /semc
-mkdir /semc
+# Check if semcOS is being used
+if ! command -v semc-install &> /dev/null
+then
+    read -p "semcOS not found. Proceed to install on this OS? " -n 1 -r
+    if [[ ! $REPLY =~ ^[Yy]$ ]]
+    then
+        exit 1
+    fi
+    
+    # semcOS is not being used, but user wants to proceed
+    installDirectory
+    
+    # Initialize core installer
+    bash /semc/src/core/actions/install/installer.sh
 
-# Clone core
-mkdir /semc/src
-cd /semc/src
-git clone https://github.com/semissioncontrol/core
+    exit 0
+fi
 
-# Initialize core installer
+# User is indeed using semcOS
+xbps-install -Suv
+installDirectory
 bash /semc/src/core/actions/install/installer.sh
+
+function installDirectory {
+    # Create /semc
+    mkdir /semc
+
+    # Clone core
+    mkdir /semc/src
+    cd /semc/src
+    git clone https://github.com/semissioncontrol/core
+}
