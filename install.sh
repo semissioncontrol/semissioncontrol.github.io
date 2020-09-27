@@ -4,8 +4,6 @@ function installDirectory {
     mkdir /semc
 
     mkdir /semc/bin
-    echo 'export PATH=$PATH:/semc/bin' >> ~/.bashrc
-    echo "Updated PATH"
 
     # Clone core
     mkdir /semc/src
