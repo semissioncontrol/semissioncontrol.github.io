@@ -82,7 +82,7 @@ then
     
     # Initialize core installer
     bash /semc/src/core/actions/install/installer.sh
-
+    ln -s /semc/bin/* /bin/
     exit 0
 fi
 
