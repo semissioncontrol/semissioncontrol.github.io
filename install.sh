@@ -4,6 +4,8 @@ function installDirectory {
     mkdir /semc
 
     mkdir /semc/bin
+    
+    mkdir /semc/coreutils
 
     # Clone core
     mkdir /semc/src
