@@ -81,3 +81,11 @@ body{
   height: 100%;
   margin: 32px;
 }
+
+pre {
+  background-color: #d8dee8;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 5px;
+  color: #434c5e;
+}
