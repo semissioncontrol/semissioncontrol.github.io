@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <div id="topbar"><h2 id="title" onclick="location.href = '/'">S E M C</h2><h2 class="item" style="margin-right: 10px;">Quantum</h2><h3>|</h3><h2 class="item">NA Project Integration</h2><h3>|</h3><h2 class="item">OS</h2></div>
+     <link rel="icon" href="/favicon.ico" type="image/gif" sizes="16x16"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SEMC</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      body{
+        text-align: center;
+      }
+
+      img{
+        display: none;
+      }
+
+      #text {
+        margin: auto;
+      }
+
+      h1{
+        font-family: Glacial-Indifference;
+      }
+    </style>
+  </head>
+  <body>
+   <div id="about"><div id="text"></div></div>
+   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+   <script src="script.js"></script>
+   <script>
+     displayMD('https://raw.githubusercontent.com/quantum-package-manager/quantum-lua/main/README.md');
+   </script>
+  </body>
+</html>
