@@ -4,6 +4,8 @@ function installDirectory {
     mkdir /semc
 
     mkdir /semc/bin
+    
+    mkdir /semc/coreutils
 
     # Clone core
     mkdir /semc/src
@@ -15,12 +17,15 @@ function installDirectory {
 echo "SEMC installer v0.1.1"
 
 # Confirmation from user
-read -p "Install SEMC on this device? " -n 1 -r
-if [[ ! $REPLY =~ ^[Yy]$ ]]
+if [[ $1 != "-y" ]]
 then
-    echo
-    echo "Aborting..."
-    exit 1
+	read -p "Install SEMC on this device? " -n 1 -r
+	if [[ ! $REPLY =~ ^[Yy]$ ]]
+	then
+    		echo
+    		echo "Aborting..."
+    		exit 1
+	fi
 fi
 
 echo
@@ -79,7 +84,7 @@ then
     
     # Initialize core installer
     bash /semc/src/core/actions/install/installer.sh
-
+    ln -s /semc/bin/* /bin/
     exit 0
 fi
 
@@ -123,3 +128,4 @@ echo
 xbps-install -Suv
 installDirectory
 bash /semc/src/core/actions/install/installer.sh
+
