@@ -7,7 +7,7 @@ class IndexPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder(
-          future: rootBundle.loadString("markdown/index.md"),
+          future: rootBundle.loadString("markdown/projects.md"),
           builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
             if (snapshot.hasData) {
               return Markdown(
