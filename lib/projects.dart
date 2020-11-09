@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
-class IndexPage extends StatelessWidget {
+class ProjectsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

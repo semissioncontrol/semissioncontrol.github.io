@@ -1,11 +1,13 @@
 # Hello World!
 
-_I'm a Markdown file._
+Welcome to SEMC, where we build, develop and engineer Open Source Software for Mission Control!
+
+Here's a [link](projects)
 
 This is some code:
 
 ```
-class MyClass {
- final String name = "Paul";
-}
+:::python
+def a:
+    print("Hello!")
 ```

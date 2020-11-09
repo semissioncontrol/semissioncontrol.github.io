@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'index.dart';
+import 'projects.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +13,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: IndexPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => IndexPage(),
+        '/projects': (context) => ProjectsPage(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
