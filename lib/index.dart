@@ -13,7 +13,12 @@ class IndexPage extends StatelessWidget {
           future: rootBundle.loadString("markdown/index.md"),
           builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
             if (snapshot.hasData) {
-              return Markdown(data: snapshot.data);
+              return Markdown(
+                data: snapshot.data,
+                styleSheet: MarkdownStyleSheet(
+                  h1: TextStyle(color: Colors.blue, fontSize: 40),
+                ),
+              );
             }
 
             return Center(
