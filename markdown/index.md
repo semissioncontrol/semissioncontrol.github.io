@@ -7,7 +7,6 @@ Here's a [link](projects)
 This is some code:
 
 ```
-:::python
 def a:
     print("Hello!")
 ```
